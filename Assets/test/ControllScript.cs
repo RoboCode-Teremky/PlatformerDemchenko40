@@ -9,7 +9,6 @@ public class ControllScript : MonoBehaviour
     void Start()
     {
         Debug.Log("Hello from new script!");
-        transform.position = new Vector2 (0.0f, 0.0f);
     }
 
     // Update is called once per frame
@@ -24,9 +23,6 @@ public class ControllScript : MonoBehaviour
         
     private void OnCollisionEnter2D(Collision2D other)
        {
-        if(other.gameObject.CompareTag("Halberd")){
-            Destroy(gameObject);
-        }
         if(other.gameObject.CompareTag("Enemy")){
             Destroy(other.gameObject);
         }
